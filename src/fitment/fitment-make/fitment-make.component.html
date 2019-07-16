@@ -1,0 +1,10 @@
+<button (click)="previous()">Previous</button>
+
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="20px">
+    <ng-container *ngFor="let make of (makes$ | async)">
+        <div (click)="goToModels(make)" fxFlex="0 1 calc(50% - 32px)" class="card">
+            <div >{{make}}</div>
+        </div>
+    </ng-container>
+</div>
+

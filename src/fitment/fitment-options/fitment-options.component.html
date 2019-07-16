@@ -1,0 +1,9 @@
+<button (click)="previous()">Previous</button>
+
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="20px">
+    <ng-container *ngFor="let option of (options$ | async)">
+        <div (click)="goToCheckout(option)" fxFlex="0 1 calc(50% - 32px)" class="card">
+            <div >{{option}}</div>
+        </div>
+    </ng-container>
+</div>

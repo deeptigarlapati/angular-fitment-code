@@ -1,0 +1,9 @@
+<button (click)="previous()">Previous</button>
+
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="20px">
+    <ng-container *ngFor="let trim of (trims$ | async)">
+        <div (click)="goToOptions(trim)" fxFlex="0 1 calc(50% - 32px)" class="card">
+            <div >{{trim}}</div>
+        </div>
+    </ng-container>
+</div>

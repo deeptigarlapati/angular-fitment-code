@@ -1,0 +1,9 @@
+<button (click)="previous()">Previous</button>
+
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="20px">
+    <ng-container *ngFor="let model of (models$ | async)">
+        <div (click)="goToTrims(model)" fxFlex="0 1 calc(50% - 32px)" class="card">
+            <div >{{model}}</div>
+        </div>
+    </ng-container>
+</div>

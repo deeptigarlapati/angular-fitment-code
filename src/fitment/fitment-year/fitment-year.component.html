@@ -1,0 +1,10 @@
+
+<button (click)="previous()">Previous</button>
+
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="20px">
+    <ng-container *ngFor="let year of (years$ | async)">
+        <div (click)="goToMake(year)" fxFlex="0 1 calc(25% - 32px)" class="card">
+           {{year}}
+        </div>
+    </ng-container>
+</div>
